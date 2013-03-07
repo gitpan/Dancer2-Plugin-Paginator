@@ -1,0 +1,27 @@
+---
+abstract: 'Dancer2 plugin for Paginator::Lite'
+author:
+  - 'Blabos de Blebe <blabos@cpan.org>'
+build_requires:
+  Dancer2::Test: 0
+  JSON: 0
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300030, CPAN::Meta::Converter version 2.120921'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Dancer2-Plugin-Paginator
+requires:
+  Dancer2: 0
+  Dancer2::Plugin: 0
+  Paginator::Lite: 2.000007
+  strict: 0
+  warnings: 0
+resources:
+  bugtracker: https://github.com/blabos/Dancer2-Plugin-Paginator/issues
+  repository: git://github.com/blabos/Dancer2-Plugin-Paginator.git
+version: 1.000000

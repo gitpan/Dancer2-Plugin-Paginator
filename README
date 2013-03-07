@@ -1,0 +1,48 @@
+NAME
+    Dancer2::Plugin::Paginator - Dancer2 plugin for Paginator::Lite
+
+VERSION
+    version 1.000000
+
+SYNOPSIS
+        use Dancer2;
+        use Dancer2::Plugin::Paginator;
+    
+        get '/list' => sub {
+            my $paginator = paginator(
+                'curr'     => $page,
+                'items'    => rset('Post')->count,
+                'base_url' => '/posts/page/',
+            );
+        
+            template 'list', { paginator => $paginator };
+        };
+    
+        dance;
+
+FUNCTIONS
+  paginator %params
+    This keyword returns a Paginator::Lite object. Receives same parameters
+    that the Paginator::Lite constructor.
+
+CONFIGURATION
+    Configuration can be done in your Dancer2 config file as described
+    below:
+
+        plugins:
+            Paginator:
+                frame_size: 3
+                page_size: 7
+
+SEE ALSO
+    Paginator::Lite
+
+AUTHOR
+    Blabos de Blebe <blabos@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Blabos de Blebe.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
